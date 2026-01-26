@@ -9,9 +9,9 @@ export type PostMeta = {
 // Add new posts here (ONE line per post)
 export const POSTS: PostMeta[] = [
     {
-        slug: "first_post",
-        title: "first_post",
-        import: () => import("../content/posts/first_post.mdx"),
+        slug: "i_made_this_website",
+        title: "I made this website!",
+        import: () => import("../content/posts/i_made_this_website.mdx"),
     },
     {
         slug: "second_post",

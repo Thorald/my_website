@@ -1,51 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Navbar from "./components/Navbar";
+import { POSTS } from "../lib/posts";
 
 export default function Board() {
+  const latestPosts = POSTS.slice(0, 3);
+
   return (
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "32px 16px" }}>
       {/* Navbar */}
-      <nav
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "12px 16px",
-          border: "1px solid rgba(255,255,255,0.12)",
-          borderRadius: 12,
-          marginBottom: 24,
-        }}
-      >
-        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <div
-            style={{
-              width: 34,
-              height: 34,
-              borderRadius: 10,
-              border: "1px solid rgba(255,255,255,0.18)",
-              display: "grid",
-              placeItems: "center",
-              fontWeight: 700,
-            }}
-          >
-            E
-          </div>
-          <span style={{ fontWeight: 700 }}>Emil’s Site</span>
-        </div>
-
-        <div style={{ display: "flex", gap: 16 }}>
-          <a href="#" style={{ opacity: 0.85, textDecoration: "none" }}>
-            Projects
-          </a>
-          <a href="#" style={{ opacity: 0.85, textDecoration: "none" }}>
-            About
-          </a>
-          <Link href="/blog" style={{ opacity: 0.85, textDecoration: "none" }}>
-            Blog
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero */}
       <header style={{ marginBottom: 22 }}>
@@ -107,37 +72,32 @@ export default function Board() {
         </div>
 
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-          <li style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-            <Link
-              href="/blog/first_post"
-              style={{
-                display: "block",
-                padding: "14px 16px",
-                textDecoration: "none",
-              }}
+          {latestPosts.map((p) => (
+            <li
+              key={p.slug}
+              style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
             >
-              <div style={{ fontWeight: 700 }}>My First Post</div>
-              <div style={{ opacity: 0.7, fontSize: 14, marginTop: 4 }}>
-                /blog/first_post
-              </div>
-            </Link>
-          </li>
+              <Link
+                href={`/blog/${p.slug}`}
+                style={{
+                  display: "block",
+                  padding: "14px 16px",
+                  textDecoration: "none",
+                }}
+              >
+                <div style={{ fontWeight: 700 }}>{p.title}</div>
+                <div style={{ opacity: 0.7, fontSize: 14, marginTop: 4 }}>
+                  /blog/{p.slug}
+                </div>
+              </Link>
+            </li>
+          ))}
 
-          <li style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-            <Link
-              href="/blog/second_post"
-              style={{
-                display: "block",
-                padding: "14px 16px",
-                textDecoration: "none",
-              }}
-            >
-              <div style={{ fontWeight: 700 }}>My Second Post</div>
-              <div style={{ opacity: 0.7, fontSize: 14, marginTop: 4 }}>
-                /blog/second_post
-              </div>
-            </Link>
-          </li>
+          {latestPosts.length === 0 && (
+            <li style={{ padding: "14px 16px", opacity: 0.75 }}>
+              No posts yet.
+            </li>
+          )}
         </ul>
       </section>
 
@@ -185,11 +145,17 @@ export default function Board() {
         >
           <div style={{ fontWeight: 700 }}>Links</div>
           <div style={{ opacity: 0.75, marginTop: 6 }}>
-            <a href="https://github.com/Thorald" style={{ opacity: 0.9, textDecoration: "none" }}>
+            <a
+              href="https://github.com/Thorald"
+              style={{ opacity: 0.9, textDecoration: "none" }}
+            >
               GitHub
             </a>
             <br />
-            <a href="https://www.linkedin.com/in/emil-rasmussen-8b02792a5/" style={{ opacity: 0.9, textDecoration: "none" }}>
+            <a
+              href="https://www.linkedin.com/in/emil-rasmussen-8b02792a5/"
+              style={{ opacity: 0.9, textDecoration: "none" }}
+            >
               LinkedIn
             </a>
           </div>
