@@ -16,7 +16,7 @@ export default function Board() {
       <header style={{ marginBottom: 22 }}>
         <h1 style={{ fontSize: 42, margin: 0, lineHeight: 1.1 }}>Home</h1>
         <p style={{ opacity: 0.75, marginTop: 10, maxWidth: 650 }}>
-          A small personal site for writeups, notes, and experiments.
+          My personal site for writeups, notes, and experiments.
         </p>
 
         <div style={{ display: "flex", gap: 12, marginTop: 14 }}>

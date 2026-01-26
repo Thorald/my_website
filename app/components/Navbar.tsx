@@ -16,7 +16,7 @@ export default function Navbar() {
             <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
                 <div
                     style={{
-                        width: 34,
+                        width: 100,
                         height: 34,
                         borderRadius: 10,
                         border: "1px solid rgba(255,255,255,0.18)",
@@ -25,13 +25,10 @@ export default function Navbar() {
                         fontWeight: 700,
                     }}
                 >
-                    E
-                </div>
-                <span style={{ fontWeight: 700 }}>
                     <a href="/" style={{ opacity: 0.85, textDecoration: "none" }}>
                         Emil's Site
                     </a>
-                </span>
+                </div>
             </div>
 
             <div style={{ display: "flex", gap: 16 }}>
