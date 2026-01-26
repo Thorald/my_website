@@ -1,6 +1,7 @@
 // lib/posts.ts
 export type PostMeta = {
     slug: string;
+    title: string;
     // optional later: date, tags, etc.
     import: () => Promise<any>;
 };
@@ -9,10 +10,12 @@ export type PostMeta = {
 export const POSTS: PostMeta[] = [
     {
         slug: "first_post",
+        title: "first_post",
         import: () => import("../content/posts/first_post.mdx"),
     },
     {
         slug: "second_post",
+        title: "second_post",
         import: () => import("../content/posts/second_post.mdx"),
     },
 ];

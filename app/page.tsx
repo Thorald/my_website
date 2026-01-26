@@ -185,12 +185,12 @@ export default function Board() {
         >
           <div style={{ fontWeight: 700 }}>Links</div>
           <div style={{ opacity: 0.75, marginTop: 6 }}>
-            <a href="#" style={{ opacity: 0.9, textDecoration: "none" }}>
-              GitHub (soon)
+            <a href="https://github.com/Thorald" style={{ opacity: 0.9, textDecoration: "none" }}>
+              GitHub
             </a>
             <br />
-            <a href="#" style={{ opacity: 0.9, textDecoration: "none" }}>
-              LinkedIn (soon)
+            <a href="https://www.linkedin.com/in/emil-rasmussen-8b02792a5/" style={{ opacity: 0.9, textDecoration: "none" }}>
+              LinkedIn
             </a>
           </div>
         </div>

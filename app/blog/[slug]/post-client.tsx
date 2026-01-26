@@ -1,21 +1,48 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import Navbar from "../../components/Navbar";
 import { POSTS_BY_SLUG } from "@/lib/posts";
 
 export default function PostClient({ slug }: { slug: string }) {
     const post = POSTS_BY_SLUG[slug];
+    if (!post) return <p>Post not found.</p>;
 
-    // This prevents MDX from being imported during SSR (avoids createContext server error)
+    // Prevent MDX from being imported during SSR (avoids createContext server error)
     const MDX = dynamic(post.import, {
         ssr: false,
-        loading: () => <p>Loading…</p>,
+        loading: () => <p style={{ opacity: 0.75 }}>Loading…</p>,
     });
 
     return (
-        <main>
-            <h1>This is a blogpost!</h1>
-            <MDX />
+        <main style={{ maxWidth: 900, margin: "0 auto", padding: "32px 16px" }}>
+            <Navbar />
+
+            <article
+                style={{
+                    maxWidth: 720,
+                    margin: "0 auto",
+                    padding: "18px 16px",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    borderRadius: 16,
+                }}
+            >
+                <div style={{ marginBottom: 14 }}>
+                    <Link href="/blog" style={{ textDecoration: "none", opacity: 0.8 }}>
+                        ← Back to blog
+                    </Link>
+                </div>
+
+                <h1 style={{ fontSize: 34, margin: "8px 0 14px", lineHeight: 1.15 }}>
+                    {post.title}
+                </h1>
+
+                {/* MDX content */}
+                <div style={{ lineHeight: 1.7 }}>
+                    <MDX />
+                </div>
+            </article>
         </main>
     );
 }
