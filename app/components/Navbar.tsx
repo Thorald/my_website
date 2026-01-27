@@ -13,22 +13,10 @@ export default function Navbar() {
                 marginBottom: 24,
             }}
         >
-            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-                <div
-                    style={{
-                        width: 100,
-                        height: 34,
-                        borderRadius: 10,
-                        border: "1px solid rgba(255,255,255,0.18)",
-                        display: "grid",
-                        placeItems: "center",
-                        fontWeight: 700,
-                    }}
-                >
-                    <a href="/" style={{ opacity: 0.85, textDecoration: "none" }}>
-                        Emil's Site
-                    </a>
-                </div>
+            <div style={{ display: "flex", gap: 12, alignItems: "left" }}>
+                <a href="/" style={{ opacity: 0.85, textDecoration: "none", fontWeight: "700" }}>
+                    Emil Thorald Krakau Rasmussen
+                </a>
             </div>
 
             <div style={{ display: "flex", gap: 32 }}>
