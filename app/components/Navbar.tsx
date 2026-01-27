@@ -31,12 +31,12 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div style={{ display: "flex", gap: 16 }}>
+            <div style={{ display: "flex", gap: 32 }}>
                 <a href="#" style={{ opacity: 0.85, textDecoration: "none" }}>
                     Projects
                 </a>
                 <a href="#" style={{ opacity: 0.85, textDecoration: "none" }}>
-                    About
+                    About me
                 </a>
                 <Link href="/blog" style={{ opacity: 0.85, textDecoration: "none" }}>
                     Blog

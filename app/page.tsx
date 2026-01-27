@@ -3,9 +3,12 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import { POSTS } from "../lib/posts";
+import { useState } from "react";
+import { LadybugWalker } from "./components/ladybugWalker"; // adjust path if needed
 
 export default function Board() {
   const latestPosts = POSTS.slice(0, 3);
+  const [dir, setDir] = useState(1); // 1 = right, -1 = left
 
   return (
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "32px 16px" }}>
@@ -161,6 +164,7 @@ export default function Board() {
           </div>
         </div>
       </section>
+      <LadybugWalker />
     </main>
   );
 }
