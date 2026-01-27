@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { POSTS } from "../../lib/posts";
+import { LadybugWalker } from "../components/ladybugWalker";
 
 export default function BlogIndex() {
     return (
@@ -65,6 +66,7 @@ export default function BlogIndex() {
                     )}
                 </ul>
             </section>
+            <LadybugWalker />
         </main>
     );
 }

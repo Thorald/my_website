@@ -122,7 +122,7 @@ export default function Board() {
         >
           <div style={{ fontWeight: 700 }}>Now</div>
           <div style={{ opacity: 0.75, marginTop: 6 }}>
-            Building a tiny blog system with MDX + Next.js.
+            Building a this website! With React + Next.js.
           </div>
         </div>
 
