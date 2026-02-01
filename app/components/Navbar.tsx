@@ -8,7 +8,6 @@ export default function Navbar() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 padding: "12px 16px",
-                border: "1px solid rgba(255,255,255,0.12)",
                 borderRadius: 12,
                 marginBottom: 24,
             }}
