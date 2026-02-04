@@ -27,8 +27,7 @@ export default function Board() {
           style={{
             maxWidth: 900,
             margin: "0 auto",
-            padding: "32px 16px",
-            backgroundColor: "rgba(0,0,0,0.15)", // optional overlay
+            padding: "50px 16px",
           }}
         >
           {/* Navbar */}

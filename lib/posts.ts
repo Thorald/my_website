@@ -14,9 +14,9 @@ export const POSTS: PostMeta[] = [
         import: () => import("../content/posts/i_made_this_website.mdx"),
     },
     {
-        slug: "second_post",
-        title: "second_post",
-        import: () => import("../content/posts/second_post.mdx"),
+        slug: "study_on_phone_use_in_trains",
+        title: "I made a study on phone use in trains",
+        import: () => import("../content/posts/study_on_phone_use_in_trains.mdx"),
     },
 ];
 
