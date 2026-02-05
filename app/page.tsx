@@ -18,14 +18,14 @@ export default function Board() {
       <section
         style={{
           width: "100%",
-          backgroundImage: "url('/images/navbar-bg.jpg')",
+          backgroundImage: "url('/images/navbar-bg.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center 40%",
+          backgroundPosition: "center 0%",
         }}
       >
         <div
           style={{
-            maxWidth: 900,
+            maxWidth: 1200,
             margin: "0 auto",
             padding: "50px 16px",
           }}

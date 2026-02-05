@@ -1,4 +1,13 @@
+"use client";
 import Link from "next/link";
+
+const linkStyle = {
+    color: "#FFF",
+    fontSize: 18,
+    fontWeight: 600,
+    textDecoration: "none",
+    opacity: 0.9,
+};
 
 export default function Navbar() {
     return (
@@ -7,28 +16,46 @@ export default function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                padding: "12px 16px",
+                padding: "16px 20px",
                 borderRadius: 12,
                 marginBottom: 24,
             }}
         >
-            <div style={{ display: "flex", gap: 12, alignItems: "left" }}>
-                <a href="/" style={{ opacity: 0.85, textDecoration: "none", fontWeight: "700" }}>
+            <div>
+                <Link
+                    href="/"
+                    className="nav-link"
+                    style={{ ...linkStyle, fontSize: 20, fontWeight: 700 }}
+                >
                     Emil Thorald Krakau Rasmussen
-                </a>
+                </Link>
             </div>
 
             <div style={{ display: "flex", gap: 32 }}>
-                <a href="#" style={{ opacity: 0.85, textDecoration: "none" }}>
+                <a href="#" className="nav-link" style={linkStyle}>
                     Projects
                 </a>
-                <a href="#" style={{ opacity: 0.85, textDecoration: "none" }}>
+                <a href="#" className="nav-link" style={linkStyle}>
                     About me
                 </a>
-                <Link href="/blog" style={{ opacity: 0.85, textDecoration: "none" }}>
+                <Link href="/blog" className="nav-link" style={linkStyle}>
                     Blog
                 </Link>
             </div>
+
+            {/* CSS needed for visited links */}
+            <style jsx>{`
+        .nav-link,
+        .nav-link:visited,
+        .nav-link:hover,
+        .nav-link:active {
+          color: white;
+        }
+
+        .nav-link:hover {
+          opacity: 1;
+        }
+      `}</style>
         </nav>
     );
 }
