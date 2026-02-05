@@ -8,7 +8,7 @@ export default function BlogIndex() {
             <section
                 style={{
                     width: "100%",
-                    backgroundImage: "url('/images/navbar-bg.jpg')",
+                    backgroundImage: "url('/images/navbar-bg4.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center 40%",
                 }}
