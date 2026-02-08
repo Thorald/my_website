@@ -35,7 +35,7 @@ export default function Navbar() {
                 <a href="#" className="nav-link" style={linkStyle}>
                     Projects
                 </a>
-                <a href="#" className="nav-link" style={linkStyle}>
+                <a href="/about" className="nav-link" style={linkStyle}>
                     About me
                 </a>
                 <Link href="/blog" className="nav-link" style={linkStyle}>

@@ -113,7 +113,7 @@ export default function Board() {
                 >
                   <div style={{ fontWeight: 700 }}>{p.title}</div>
                   <div style={{ opacity: 0.7, fontSize: 14, marginTop: 4 }}>
-                    /blog/{p.slug}
+                    {p.date}
                   </div>
                 </Link>
               </li>

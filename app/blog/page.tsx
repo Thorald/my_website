@@ -32,7 +32,7 @@ export default function BlogIndex() {
                 <header style={{ marginBottom: 18 }}>
                     <h1 style={{ fontSize: 42, margin: 0 }}>Blog</h1>
                     <p style={{ opacity: 0.75, marginTop: 10 }}>
-                        All posts from <code>content/posts</code>.
+                        All posts from content/posts
                     </p>
                 </header>
 
